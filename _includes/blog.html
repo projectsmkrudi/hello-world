@@ -1,0 +1,49 @@
+<section>
+    <div class="latest-news">
+        <div class="container">
+            <div class="latest-news-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <div class="icon">
+                                <i class="fa fa-file"></i>
+                            </div>
+                            <div class="text-content">
+                                <h2>{{ page.blog-sub-title }}</h2>
+                                <span>{{ page.blog-sub-title-description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for post in site.posts %}
+                <div class="col-md-4">
+                    <div class="item wow fadeIn" data-wow-duration="0.75s">
+                        <div class="thumb-content">
+                            <div class="date-post">
+                                <a href="{{ post.url }}">{{ post.date | date: "%d %B" }}</a>
+                            </div>
+                            <div class="thumb-inner">
+                                <a href="{{ post.url }}"><img src="{{ post.photos }}" alt="{{ post.title }}" title="{{ post.title }}"></a>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <a href="single_car.html">
+                                <h4>{{ post.title }}</h4>
+                            </a>
+                            <span>Posted by: {{ post.author }}</span>
+                            <p>{{ post.description }}</p>
+                            <div class="text-button">
+                                <a href="{{ post.url }}">Continue Reading <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="{{ site.locale }}">
+<![endif]-->
+<html lang="{{ site.locale }}">
+
+<head>
+    {% include metadata.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    {% include breadcrumbs.html %}
+    <div class="on-listing wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+        <div class="container">
+            <div class="recent-car-content">
+                <div class="row">
+                    <div class="col-md-12 offset-md-12">
+                        <div class="row">
+                            {% for post in site.posts %}
+                            <div class="col-md-12">
+                                <div class="car-item">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="thumb-content">
+                                                <div class="car-banner">
+                                                    <a href="{{ post.url }}">{{ post.event }}</a>
+                                                </div>
+                                                <div class="thumb-inner">
+                                                    <a href="{{ post.url }}"><img src="{{ post.photos }}" alt="{{ post.title }}" title="{{ post.title }}"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="down-content">
+                                                <a href="{{ post.url }}">
+                                                    <h4>{{ post.title }}</h4>
+                                                </a>
+                                                <span>{{ post.date | date: "%d %B %Y" }}</span>
+                                                <div class="line-dec"></div>
+                                                {{ post.excerpt }}
+                                                <div class="text-button">
+                                                    <a href="{{ post.url }}">Continue Reading <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+    {% include footer-js.html %}
+</body>
+
+</html>

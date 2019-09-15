@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="{{ site.locale }}">
+<![endif]-->
+<html lang="{{ site.locale }}">
+
+<head>
+    {% include metadata.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    {% include breadcrumbs.html %}
+    <div class="contact-us wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.7287997086205!2d112.0605469147782!3d-7.818504494366073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDknMDYuNiJTIDExMsKwMDMnNDUuOSJF!5e0!3m2!1sen!2sid!4v1567244330636!5m2!1sen!2sid" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <section>
+        <div class="contact-content wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="send-message">
+                            <div class="sep-section-heading">
+                                <h2>Send Us <em>Message</em></h2>
+                            </div>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdSOa13LIuaBGshDv3iA_l5QErt9J2b5ilHsKc-nLj0JgYAgQ/viewform?embedded=true" width="100%" height="751" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <div class="sep-section-heading">
+                                <h2>Kontak <em>Kami</em></h2>
+                            </div>
+                            <a href="{{ site.google-my-bussiness }}">
+                                <p>{{ site.streetAddress }} {{ site.address }} {{ site.postalCode }}</p>
+                            </a>
+                            <div class="info-list">
+                                <ul>
+                                    <a href="tel:{{ site.telephone }}">
+                                        <li><i class="fa fa-phone"></i><span>{{ site.telephonedetail }}</span></li>
+                                    </a>
+                                    <a href="sms:{{ site.telephone }}">
+                                        <li><i class="fa fa-comments-o"></i><span>{{ site.telephonedetail }}</span></li>
+                                    </a>
+                                    <a href="{{ site.whatsapp-api }}">
+                                        <li><i class="fa fa-whatsapp"></i><span>{{ site.telephonedetail }}</span></li>
+                                    </a>
+                                    <a href="mailto:{{ site.email }}">
+                                        <li><i class="fa fa-envelope"></i><span>{{ site.email }}</span></li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+    {% include footer-js.html %}
+</body>
+
+</html>

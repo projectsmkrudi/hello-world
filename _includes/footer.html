@@ -1,0 +1,60 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-item">
+                    <div class="about-us">
+                        <h2>Tentang Kami</h2>
+                        <p>{{ site.description }}</p>
+                        <ul>
+                            <li><a href="{{ site.facebook }}" title="Facebook {{ site.company }} {{ site.title }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ site.instagram }}" title="Instagram {{ site.company }} {{ site.title }}"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{ site.twitter }}" title="Twitter {{ site.company }} {{ site.title }}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ site.youtube }}" title="Youtube {{ site.company }} {{ site.title }}"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="footer-item">
+                    <div class="what-offer">
+                        <h2>Hubungi Kami</h2>
+                        <ul>
+                            <li><a href="/">{{ site.telephonenya }}</a></li>
+                            <li><a href="tel:{{ site.telephone }}">Telepon : {{ site.telephonedetail }}</a></li>
+                            <li><a href="sms:{{ site.telephone }}">SMS : {{ site.telephonedetail }}</a></li>
+                            <li><a href="{{ site.whatsapp-api }}">Whatsapp : {{ site.telephonedetail }}</a></li>
+                            <li><a href="mailto:{{ site.email }}">E-mail : {{ site.email }}</a></li>
+                            <li><a href="{{ site.google-my-bussiness }}">Alamat : {{ site.streetAddress }} {{ site.address }} {{ site.postalCode }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-item">
+                    <div class="our-gallery">
+                        <h2>Our Gallery</h2>
+                        <ul>
+                            {% for item in site.data-paket-wisata limit:3 %}
+                            <li><a href="{{ item.url }}"><img height="70px" width="70px" src="{{ item.photos }}" alt="{{ item.alt }}" title="{{ item.alt }}"></a></li>
+                            {% endfor %}
+                            {% for item in site.data-sewa-mobil limit:3 %}
+                            <li><a href="{{ item.url }}"><img height="70px" width="70px" src="{{ item.photos }}" alt="{{ item.alt }}" title="{{ item.alt }}"></a></li>
+                            {% endfor %}
+                            {% for post in site.posts %}
+                            <li><a href="{{ post.url }}"><img height="70px" width="70px" src="{{ post.photos }}" alt="{{ post.alt }}" title="{{ post.alt }}"></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="sub-footer">
+                        {{ site.copyright }}. Designed by <a href="https://klikada.com/">
+                        <img src="/assets/images/klikada-panjang.svg" width="75" height="15" layout="fixed" alt="klikada.com" title="klikada.com"></img></a>
+                </div>
+            </div>
+            {% include float-button.html %}
+        </div>
+    </div>
+</footer>

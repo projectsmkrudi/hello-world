@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="{{ site.locale }}">
+<![endif]-->
+<html lang="{{ site.locale }}">
+<head>
+    {% include metadata.html %}
+</head>
+
+<body>
+    {% include header.html %}
+	{% include breadcrumbs.html %}
+	<div class="on-grids wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+		<div class="container">
+			<div class="recent-car-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							{% for item in site.data-paket-wisata %}
+							<div class="col-md-4">
+								<div class="car-item">
+									<div class="thumb-content">
+										<div class="car-banner">
+											<a href="{{ item.url }}">{{ item.sub-title}}</a>
+										</div>
+										<div class="thumb-inner">
+											<a href="{{ item.url }}"><img src="{{ item.photos }}" alt="{{ item.alt }}" title="{{ item.alt }}"></a>
+										</div>
+									</div>
+									<div class="down-content">
+										<a href="{{ item.url }}"><h4>{{ item.title}}</h4></a>
+										<span>{{ item.harga }}</span>
+										<div class="line-dec"></div>
+										<p>{{ item.description }}</p>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% include footer.html %}
+    {% include footer-js.html %}
+</body>
+</html>

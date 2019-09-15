@@ -1,0 +1,47 @@
+<section>
+    <div class="testimonials">
+        <div class="container">
+            <div id="owl-testimonials" class="owl-carousel owl-theme">
+                
+                <div class="item wow fadeIn" data-wow-duration="0.75s" itemscope="" itemtype="http://schema.org/Review">
+                    <ul class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li itemprop="ratingValue"><i>5</i></li>
+                    </ul>
+                    <div class="line-dec"></div>
+                    <p itemprop="itemReviewed"><em>"</em> Web ini menyajikan informasi yang bermanfaat terkait sewa mobil kediri, memiliki keunikan sekaligus menawarkan paket wisata dan juga wedding car sehingga sangat menjadi rekomendasi untuk memperoleh layanannya, sukses<em>"</em></p>
+                    <div class="author-rate" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                        <img src="/images/0a849eebc61ac90c0e5d3da92dd42310.jpg" alt="Denny Rakhmad Widi Ashari" title="Denny Rakhmad Widi Asharin">
+                        <h4 itemprop="" itemscope="name" itemtype="http://schema.org/Person">Denny Rakhmad Widi Ashari</h4>
+                        <div class="line-dec2"></div>
+                        <span>Web Reviewer</span>
+                    </div>
+                </div>
+                {% for item in site.data-testimonials %}
+                <div class="item wow fadeIn" data-wow-duration="0.75s">
+                    <ul class="star-rating">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i>5</i></li>
+                    </ul>
+                    <div class="line-dec"></div>
+                    <p>{{ item.comment }}</p>
+                    <div class="author-rate">
+                        <img src="{{ item.reviewer-photo }}" alt="{{ item.reviewer-name }} {{ item.profesi }}" title="{{ item.reviewer-name }} {{ item.profesi }}">
+                        <h4>{{ item.reviewer-name }}</h4>
+                        <div class="line-dec2"></div>
+                        <span>{{ item.profesi }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

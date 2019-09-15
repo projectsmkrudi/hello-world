@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="{{ site.locale }}">
+<![endif]-->
+<html lang="{{ site.locale }}">
+
+<head>
+    {% include metadata.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    {% include breadcrumbs.html %}
+    <div class="recent-car single-car wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+        <div class="container">
+            <div class="recent-car-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="single-car" class="slider-pro">
+                            <div class="sp-slides">
+                                <div class="sp-slide">
+                                    <img class="sp-image" src="{{ page.photos }}" alt="{{ page.alt }}" title="{{ page.alt }}" />
+                                </div>
+                                <div class="sp-slide">
+                                    <img class="sp-image" src="{{ page.photos2 }}" alt="{{ page.alt2 }}" title="{{ page.alt2 }}" />
+                                </div>
+                                <div class="sp-slide">
+                                    <img class="sp-image" src="{{ page.photos3 }}" alt="{{ page.alt3 }}" title="{{ page.alt3 }}" />
+                                </div>
+                                <div class="sp-slide">
+                                    <img class="sp-image" src="{{ page.photos4 }}" alt="{{ page.alt4 }}" title="{{ page.alt4 }}" />
+                                </div>
+                                <div class="sp-slide">
+                                    <img class="sp-image" src="{{ page.photos5 }}" alt="{{ page.alt5 }}" title="{{ page.alt5 }}" />
+                                </div>
+                            </div>
+                            <div class="sp-thumbnails">
+                                <img class="sp-thumbnail" src="{{ page.photos }}" alt="{{ page.alt }}" title="{{ page.alt }}" />
+                                <img class="sp-thumbnail" src="{{ page.photos2 }}" alt="{{ page.alt2 }}" title="{{ page.alt2 }}" />
+                                <img class="sp-thumbnail" src="{{ page.photos3 }}" alt="{{ page.alt3 }}" title="{{ page.alt3 }}" />
+                                <img class="sp-thumbnail" src="{{ page.photos4 }}" alt="{{ page.alt4 }}" title="{{ page.alt4 }}" />
+                                <img class="sp-thumbnail" src="{{ page.photos5 }}" alt="{{ page.alt5 }}" title="{{ page.alt5 }}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="car-details">
+                            <h1>{{ page.title }}</h1>
+                            <span>{{ page.harga }}</span>
+                            <p>{{ page.description }}</p>
+                            <div class="similar-info">
+                                <div class="primary-button">
+                                    <a href="https://api.whatsapp.com/send?text=Order%20{{ page.bussiness }}%20{{ page.title }}%20(Nama)%20(Alamat%20Lengkap)%20&phone={{ site.telephone }}">Pesan Sekarang <i class="fa fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ content }}
+    {% include similiar-place.html %}
+    {% include footer.html %}
+    {% include footer-js.html %}
+</body>
+
+</html>

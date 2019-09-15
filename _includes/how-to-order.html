@@ -1,0 +1,45 @@
+<section>
+    <div class="features-search-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        {% for item in site.data-service limit:6 %}
+                        <div class="col-md-6">
+                            <div class="service-item wow fadeIn" data-wow-duration="0.75s">
+                                <i class="fa {{ item.fa-logo }}"></i>
+                                <div class="text-content">
+                                    <h6>{{ item.service }}</h6>
+                                    <p>{{ item.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                       {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="search-content wow fadeIn" data-wow-duration="0.75s">
+                        <div class="search-heading">
+                            <div class="icon">
+                                <i class="fa {{ page.fa-logo }}"></i>
+                            </div>
+                            <div class="text-content">
+                                <h2>{{ page.title2 }}</h2>
+                                <span>{{ page.description2 }}</span>
+                            </div>
+                        </div>
+                        <div class="search-form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="secondary-button">
+                                        <a href="{{ site.whatsapp-api }}">Pesan Sekarang <i class="fa fa-whatsapp"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

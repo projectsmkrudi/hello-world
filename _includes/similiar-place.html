@@ -1,0 +1,39 @@
+<section>
+    <div class="recent-car similar-car wow fadeIn" data-wow-duration="1s">
+        <div class="container">
+            <div class="recent-car-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <div class="icon">
+                                <i class="fa fa-car"></i>
+                            </div>
+                            <div class="text-content">
+                                <h2>{{ page.mobil-pilihan }}</h2>
+                                <span>{{ page.mobil-pilihan-description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="owl-similar" class="owl-carousel owl-theme">
+                    {% for item in site.data-paket-wisata %}
+                    <div class="item car-item">
+                        <div class="thumb-content">
+                            <div class="car-banner">
+                                <a href="{{ item.url }}">{{ item.sub-title}}</a>
+                            </div>
+                            <a href="{{ item.url }}"><img src="{{ item.photos }}" alt="{{ item.alt }}" title="{{ item.alt }}"></a>
+                        </div>
+                        <div class="down-content">
+                            <a href="{{ item.url }}">
+                                <h4>{{ item.title}}</h4>
+                            </a>
+                            <span>{{ item.harga }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

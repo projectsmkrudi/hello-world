@@ -1,0 +1,50 @@
+creator: dennyrwa
+lang: id
+locale: id-ID
+themecolor: 343a40
+title: Sewa Mobil Kediri
+company: Sewa Mobil Kediri RUY
+keywords: Sewa Mobil Kediri, Rental Mobil Kediri, Wedding Car
+description: Kami adalah sewa mobil di Kediri yang mengutamakan, harga murah yang sesuai budget Anda, kualitas armada terbaik dan mengedepankan pelayanan prima
+logo: /assets/images/logo2.png
+alt-logo: Sewa Mobil Kediri
+youtube: 
+twitter: 
+instagram: 
+facebook: 
+copyright: © Copyright <strong>RUY Travel Tour dan Carter</strong>. <br>All Rights Reserved and All the trademarks are the property of their respective owners
+whatsapp-float-desktop: https://web.whatsapp.com/send?phone=6282143027699&text=Hallo, 
+whatsapp-float-phone: whatsapp://send?text=Hallo, !&phone=+6282143027699
+exclude: [README.md]
+email: info@sewamobilkediri.com
+type: Website
+maps: 
+streetAddress: Jalan Raya Tulungrejo
+address: Pesantren, Kota Kediri
+postalCode: 64131
+telephonenya: Mas Rudy
+telephone: +6282143027699
+telephonedetail: 082-143-027-699
+whatsapp-api: https://api.whatsapp.com/send?text=Hallo%20(Nama)%20(Alamat)%20&phone=6282143027699
+fb_app_id:
+google-my-bussiness: 
+favicon: /favicon.ico
+siteurl: https://sewamobilkediri.com
+siteurl2: sewamobilkediri.com
+permalink: pretty
+excerpt_separator: <!--more-->
+plugins:
+  - jekyll-feed
+collections:
+  data-slider:
+    output: true
+  data-service:
+    output: true
+  data-testimonials:
+    output: true
+  data-sewa-mobil:
+    output: true
+    permalink: /sewa-mobil/:name/
+  data-paket-wisata:
+    output: true
+    permalink: /paket-wisata/:name/

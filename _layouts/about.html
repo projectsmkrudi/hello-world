@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="{{ site.locale }}">
+<![endif]-->
+<html lang="{{ site.locale }}">
+
+<head>
+    {% include metadata.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    {% include breadcrumbs.html %}
+    <div class="services-first about-services wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1s">
+        <div class="container">
+            <div class="row">
+                {% for item in site.data-service %}
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <i class="fa {{ item.fa-logo }}"></i>
+                        <div class="text-content">
+                            <h6>{{ item.service }}</h6>
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="more-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{{ page.photos }}" alt="{{ page.title }}" title="{{ page.title }}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right-content">
+                            <span>{{ page.subtitle1 }}</span>
+                            <h4>{{ page.subtitle2 }}</h4>
+                            <p>{{ page.subtitle3 }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="our-clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <div class="icon">
+                                <i class="fa fa-users"></i>
+                            </div>
+                            <div class="text-content">
+                                <h2>Klien Kami</h2>
+                                <span>Berikut adalah klien kami dari berbagai macam latarbelakang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="owl-clients" class="owl-carousel owl-theme">
+                            {% for item in site.data-testimonials %}
+                            <div class="item">
+                                <img src="{{ item.reviewer-photo }}" alt="{{ item.reviewer-name }} {{ item.profesi }}" title="{{ item.reviewer-name }} {{ item.profesi }}">
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+    {% include footer-js.html %}
+</body>
+
+</html>

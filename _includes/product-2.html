@@ -1,0 +1,44 @@
+<section>
+    <div class="recent-cars">
+        <div class="container">
+            <div class="recent-car-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <div class="icon">
+                                <i class="fa fa-car"></i>
+                            </div>
+                            <div class="text-content">
+                                <h2>{{ page.product-2 }}</h2>
+                                <span>{{ page.product-2-description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for item in site.data-paket-wisata limit:6 %}
+                    <div class="col-md-4 col-sm-6">
+                        <div class="car-item wow fadeIn" data-wow-duration="0.75s">
+                            <div class="thumb-content">
+                                <div class="car-banner">
+                                    <a href="{{ item.url }}">{{ item.sub-title}}</a>
+                                </div>
+                                <div class="thumb-inner">
+                                    <a href="{{ item.url }}"><img src="{{ item.photos }}" alt="{{ item.alt }}" title="{{ item.alt }}"></a>
+                                </div>
+                            </div>
+                            <div class="down-content">
+                                <a href="{{ item.url }}">
+                                    <h4>{{ item.title}}</h4>
+                                </a>
+                                <span>{{ item.harga }}</span>
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

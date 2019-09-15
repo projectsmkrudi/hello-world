@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie ie9" lang="{{ site.locale }}">
+<![endif]-->
+<html lang="{{ site.locale }}">
+
+<head>
+    {% include metadata.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    {% include breadcrumbs.html %}   
+    <div class="blog-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="single-post">
+                        <div class="item">
+                            <img src="{{ page.photos }}" alt="">
+                            <div class="down-content">
+                                <h1>{{ page.title }}</h1>
+                                <ul>
+                                    <li><span><em>Posted by:</em><a href="/">{{ page.author }}</a></span></li>
+                                    <li><span><em>Posted on:</em>{{ page.date | date: "%d %B %Y" }}</span></li>
+                                    <li><span><em>Share on:</em><a href="https://www.facebook.com/dialog/share?app_id={{ site.fb_app_id }}&display=popup&href={{ site.url }}{{ page.url }}">Facebook</a>,<a href="https://twitter.com/intent/tweet?text={{ page.title }}%20{{ site.url }}{{ page.url }}"> Twitter</a>,<a href="https://wa.me/?text={{ site.url }}{{ page.url }}">Whatsapp</a></span></li>
+                                </ul>
+                                {{ content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="sidebar-widgets">
+                        <div class="sidebar-widget">
+                            <div class="text-widget">
+                                <div class="sidebar-heading">
+                                    <h4>apa ini</h4>
+                                </div>
+                                <p>{{ page.description }}</p>
+                                <ul>
+                                    <li><a href="{{ site.facebook }}" title="Facebook {{ site.company }} {{ site.title }}"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="{{ site.instagram }}" title="Instagram {{ site.company }} {{ site.title }}"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="{{ site.twitter }}" title="Twitter {{ site.company }} {{ site.title }}"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="{{ site.youtube }}" title="Youtube {{ site.company }} {{ site.title }}"><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget">
+                            <div class="recent-posts">
+                                <div class="sidebar-heading">
+                                    <h4>Apa yang baru</h4>
+                                </div>
+                                <ul>
+                                    {% for post in site.posts limit:10 %}
+                                    <li>
+                                        <a href="{{ post.url }}">
+                                            <img src="{{ post.photos }}" alt="{{ post.title }}" title="{{ post.title }}">
+                                            <h6>{{ post.title }}</h6>
+                                            <span>{{ post.date | date: "%d %B %Y" }}</span>
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+    {% include footer-js.html %}
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<section class="top-slider-features wow fadeIn" data-wow-duration="1.5s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slider-top-features">
+                    <div id="owl-top-features" class="owl-carousel owl-theme">
+                        {% for item in site.data-sewa-mobil limit:12 %}
+                        <div class="item car-item">
+                            <div class="thumb-content">
+                                <a href="{{ item.url }}"><img src="{{ item.photos }}" alt="{{ item.title }}" title="{{ item.title }}"></a>
+                            </div>
+                            <div class="down-content">
+                                <a href="{{ item.url }}">
+                                    <h4>{{ item.title }}</h4>
+                                </a>
+                                <span>{{ item.harga }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
