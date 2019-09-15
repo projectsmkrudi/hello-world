@@ -769,7 +769,7 @@ section {
 
 @media (max-width:767px) {
     .site-header {
-        background-color: #0000ff; /*edit #f4c23d*/
+        background-color: #f9f9f9; /*edit #f4c23d*/
         -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)
     }
@@ -876,7 +876,7 @@ only screen and (min-resolution:192dpi) and (max-width:1024px) {
         font-family: 'FontAwesome';
         float: right;
         color: #1e1e1e;
-        background-color: #0000ff; /*edit #f4c23d;*/
+        background-color: #eee; /*edit #f4c23d;*/
         display: inline-block;
         width: 46px;
         height: 46px;
