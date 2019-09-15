@@ -47,6 +47,13 @@
                         <div class="car-details">
                             <h1>{{ page.title }}</h1>
                             <span>{{ page.harga }}</span>
+                            <p><i>Share on : </i>&nbsp;&nbsp;&nbsp;
+                                <a href="https://www.facebook.com/dialog/share?app_id={{ site.fb_app_id }}&display=popup&href={{ site.url }}{{ page.url }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="https://twitter.com/intent/tweet?text={{ page.title }}%20{{ site.url }}{{ page.url }}">  <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="https://wa.me/?text={{ page.title }}%20{{ page.description }}%20{{ site.url }}{{ page.url }}"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+                            </p>
                             <p>{{ page.description }}</p>
                             <div class="similar-info">
                                 <div class="primary-button">
